@@ -1,0 +1,27 @@
+<html>
+<body>
+    <h3> Language Prediction Form </h3>
+    <h3> Languages include: </h3>
+    <h5> Estonian, Swedish, English, Russian, Romanian, Persian<h5>
+    <h5> Pushto, Spanish, Hindi, Korean, Chinese, French<h5>
+    <h5> Portugese, Indonesian, Urdu, Latin, Turkish<h5>
+    <h5> Japanese, Dutch, Tamil, Thai, Arabic<h5>
+            <div>
+                <form method = "POST" action = "/predict">
+                    <label for = "language">Please enter text strings in above languages: </label>
+                    <br>
+                    <textarea name = "language" placeholder = "Enter your text" rows = "5" cols = "35">{{text}}</textarea>
+                        <br>
+                        <br>
+                        <button> Submit </button>
+                        <a href="/"> Reset </a>
+                        </form>
+            </div>
+            <div>
+                {% if prediction %}
+                    <h4> The langauge is in {{prediction}} <h4>
+                {% endif %}
+            </div>
+            
+</body>
+</html>
